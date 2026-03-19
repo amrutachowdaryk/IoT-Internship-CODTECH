@@ -2,8 +2,8 @@
 
 This project controls multiple devices using Arduino.
 
-## Components
-- Arduino
+## Components Used
+- Arduino UNO
 - 2 LEDs
 
 ## Working
@@ -11,3 +11,9 @@ This project controls multiple devices using Arduino.
 2 → Light OFF  
 3 → Fan ON  
 4 → Fan OFF  
+
+## Output
+Devices respond correctly to commands.
+
+## Simulation Link
+(Add your Tinkercad link here)
