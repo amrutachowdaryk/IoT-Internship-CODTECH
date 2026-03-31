@@ -1,14 +1,20 @@
+int sensorPin = A0;
+int ledPin = 9;
+
 void setup() {
-  pinMode(13, OUTPUT);
+  pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
-  if (Serial.available()) {
-    String cmd = Serial.readStringUntil('\n');
-    cmd.trim();
+  int value = analogRead(sensorPin);
+  Serial.println(value);
 
-    if (cmd == "ON") digitalWrite(13, HIGH);
-    else if (cmd == "OFF") digitalWrite(13, LOW);
+  if(value < 300) {
+    digitalWrite(ledPin, HIGH);  // Light ON
+  } else {
+    digitalWrite(ledPin, LOW);   // Light OFF
   }
+
+  delay(500);
 }
